@@ -25,7 +25,12 @@ a { color: var(--blue-dark); }
 .hero h1 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(4rem, 10vw, 7.4rem); font-weight: 500; letter-spacing: -.06em; line-height: .98; }
 .subtitle { max-width: 930px; margin: 22px auto 25px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.35rem, 3vw, 2rem); line-height: 1.3; }
 .authors { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 26px; color: var(--blue-dark); font-size: 1.06rem; }
+.authors a { color: inherit; text-decoration: none; }
+.authors a:hover, .authors a:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
 .affiliation { margin: 6px 0 0; color: var(--muted); font-size: .96rem; }
+.lab-affiliation { margin: 5px 0 0; font-size: .88rem; }
+.lab-affiliation a { color: var(--blue-dark); text-decoration: none; }
+.lab-affiliation a:hover, .lab-affiliation a:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
 
 .project-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 22px; margin-top: 32px; }
 .project-links a { display: grid; gap: 6px; justify-items: center; color: var(--text); font-size: .82rem; font-weight: 700; text-decoration: none; }
