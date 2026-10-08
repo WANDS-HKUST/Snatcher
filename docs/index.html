@@ -91,7 +91,7 @@
         </div>
       </section>
 
-      <section class="section designs-section">
+      <section class="section designs-section" id="design">
         <div class="container">
           <h2>Three-Level Design</h2>
 
@@ -101,7 +101,7 @@
               <h3>Acoustic Direction Finding</h3>
               <p>Snatcher triggers the non-owner sound on a separated AirTag or AirPods and uses smartphone microphone measurements together with human-body shadowing to infer the target direction.</p>
             </div>
-            <figure class="paper-figure compact-figure">
+            <figure class="paper-figure design-figure">
               <img src="assets/paper-level1.webp" alt="Human-body acoustic shadowing principle" loading="lazy" />
             </figure>
           </article>
@@ -112,7 +112,7 @@
               <h3>RSSI–IMU Navigation</h3>
               <p>For silent devices, Snatcher combines BLE signal trends with the phone’s motion trajectory to estimate whether the user should continue, turn around, or explore a new direction.</p>
             </div>
-            <figure class="paper-figure">
+            <figure class="paper-figure design-figure">
               <img src="assets/paper-level2.webp" alt="Architecture of the RSSI-IMU navigation system" loading="lazy" />
             </figure>
           </article>
@@ -123,7 +123,7 @@
               <h3>Spatial-Temporal Clustering</h3>
               <p>Static profiling and dynamic stitching associate fragmented BLE observations across rotating MAC addresses, enabling persistent tracking of one physical device.</p>
             </div>
-            <figure class="paper-figure">
+            <figure class="paper-figure design-figure">
               <img src="assets/paper-level3.webp" alt="Two-phase spatial-temporal identity stitching algorithm" loading="lazy" />
             </figure>
           </article>
