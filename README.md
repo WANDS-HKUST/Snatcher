@@ -6,9 +6,10 @@ framework that shows how insecure BLE advertisements, unauthenticated acoustic
 triggers, and slow MAC-address randomization in Apple's Find My network expose
 lost devices to discovery, tracking, and physical theft.
 
+🌐 Project page: [wands-hkust.github.io/Snatcher](https://wands-hkust.github.io/Snatcher/) &nbsp;·&nbsp;
 📄 Full appendix: [`doc/Snatcher_AE.pdf`](./doc/Snatcher_AE.pdf) &nbsp;·&nbsp;
 📦 Archive: [Zenodo (concept DOI — always the latest version)](https://doi.org/10.5281/zenodo.20693210) &nbsp;·&nbsp;
-🎬 Demo: [Level-1 acoustic attack (58 s, English)](./docs/assets/snatcher-level1-demo.mp4)
+🎬 Demo: [English video demo (58 s)](./docs/assets/snatcher-level1-demo.mp4)
 
 ## 📰 News
 
@@ -48,7 +49,7 @@ compelling on-device demo we **strongly encourage** you to try.
 
 One-minute install, no build — and it works on real hardware.
 
-1. **Install the app.** Download **[`SnatchAPP.apk`](https://github.com/rzy0901/Snatcher/raw/main/SnatchAPP/SnatchAPP.apk)**
+1. **Install the app.** Download **[`SnatchAPP.apk`](https://github.com/WANDS-HKUST/Snatcher/raw/main/SnatchAPP/SnatchAPP.apk)**
    and install it on any Android 7.0+ phone — open the file on the device and allow
    *"install unknown apps"*, or:
    ```bash

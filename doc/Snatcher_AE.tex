@@ -168,7 +168,7 @@ cost.
 \begin{compactitem}
   \item \textbf{Archived (permanent):} Zenodo concept DOI (resolves to the latest
         version), \url{https://doi.org/10.5281/zenodo.20693210}.
-  \item \textbf{Development version:} \url{https://github.com/rzy0901/Snatcher}.
+  \item \textbf{Development version:} \url{https://github.com/WANDS-HKUST/Snatcher}.
   \item \textbf{Anonymized mirror:} \url{https://anonymous.4open.science/r/Snatcher-4D25}.
 \end{compactitem}
 
@@ -238,7 +238,7 @@ trace-based reproduction (E1--E7) runs from the provided traces and Python code
 \subsubsection{Installation}
 \noindent\textbf{(A) Android application.}
 \emph{The fastest path is the prebuilt, signed APK --- no build needed:} download
-\texttt{SnatchAPP.apk}\footnote{\url{https://github.com/rzy0901/Snatcher/raw/main/SnatchAPP/SnatchAPP.apk}}
+\texttt{SnatchAPP.apk}\footnote{\url{https://github.com/WANDS-HKUST/Snatcher/raw/main/SnatchAPP/SnatchAPP.apk}}
 and install it on any Android~7.0+ phone (open it on the device and allow
 ``install unknown apps'', or \texttt{adb install -r SnatchAPP.apk}). To build from
 source instead, open \texttt{SnatchAPP/} in Android Studio (\emph{Run} installs
@@ -309,8 +309,8 @@ AirTag: Sound playback command sent successfully
   advertises under a ground-truth \texttt{DEVICE\_ID} and rotates its MAC every
   30\,s; (b)~the sound-maker firmware connects to a real AirTag and sends the
   non-owner sound-play command (paper Table~1). Full screenshots:
-  \href{https://github.com/rzy0901/Snatcher/blob/main/doc/figs/fw_mac_rotation.png}{\texttt{doc/figs/fw\_mac\_rotation.png}},
-  \href{https://github.com/rzy0901/Snatcher/blob/main/doc/figs/fw_soundplay.png}{\texttt{fw\_soundplay.png}}.}
+  \href{https://github.com/WANDS-HKUST/Snatcher/blob/main/doc/figs/fw_mac_rotation.png}{\texttt{doc/figs/fw\_mac\_rotation.png}},
+  \href{https://github.com/WANDS-HKUST/Snatcher/blob/main/doc/figs/fw_soundplay.png}{\texttt{fw\_soundplay.png}}.}
   \Description{ESP32 serial logs rendered as text. (a) the mimicked-AirTag firmware prints its Device ID, MAC shuffle period, and successive random MAC addresses. (b) the sound-maker firmware connects to an AirTag, finds the Find My service, and reports the sound-play command was sent successfully.}
   \label{fig:ae_fw}
 \end{figure}
