@@ -3,5 +3,7 @@
 *.wav binary
 *.png binary
 *.jpg binary
+*.webp binary
+*.mp4 binary
 *.pdf binary
 *.apk binary

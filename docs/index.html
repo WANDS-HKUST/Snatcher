@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="Project page for Snatcher: Apple Find My Network Exposes Your Lost Devices To Strangers." />
+    <meta property="og:title" content="Snatcher — ACM CCS 2026" />
+    <meta property="og:description" content="Apple Find My Network Exposes Your Lost Devices To Strangers" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/demo-poster.webp" />
+    <title>Snatcher — ACM CCS 2026</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/site.css" />
+    <script defer src="assets/site.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <main id="main">
+      <section class="hero">
+        <div class="container hero-inner">
+          <p class="venue">ACM CCS 2026</p>
+          <h1>Snatcher</h1>
+          <p class="subtitle">Apple Find My Network Exposes Your Lost Devices To Strangers</p>
+
+          <div class="authors" aria-label="Authors">
+            <span>Zhenyu Ren</span>
+            <span>Yanbo Zhang</span>
+            <span>Boya Liu</span>
+            <span>Mo Li</span>
+          </div>
+          <p class="affiliation">The Hong Kong University of Science and Technology</p>
+
+          <nav class="project-links" aria-label="Project links">
+            <a href="https://arxiv.org/abs/2606.21067"><span class="link-icon" aria-hidden="true">▤</span><span>Paper</span></a>
+            <a href="https://github.com/rzy0901/Snatcher"><span class="link-icon" aria-hidden="true">⌘</span><span>Code</span></a>
+            <a href="https://arxiv.org/abs/2606.21067"><span class="link-icon arxiv-icon" aria-hidden="true">a</span><span>arXiv</span></a>
+            <a href="https://doi.org/10.5281/zenodo.20693210"><span class="link-icon" aria-hidden="true">◇</span><span>Artifact</span></a>
+          </nav>
+
+          <div class="artifact-badges" aria-label="ACM artifact badges">
+            <figure>
+              <img src="assets/badge-available.png" alt="ACM Artifacts Available badge" />
+              <figcaption>Artifacts Available</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/badge-functional.png" alt="ACM Artifacts Evaluated — Functional badge" />
+              <figcaption>Evaluated — Functional</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/badge-reproduced.png" alt="ACM Results Reproduced badge" />
+              <figcaption>Results Reproduced</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section video-section" id="demo">
+        <div class="container narrow">
+          <h2>Video Demo</h2>
+          <p class="section-intro">Acoustic direction finding with SnatchAPP.</p>
+          <div class="video-frame">
+            <video controls preload="metadata" playsinline poster="assets/demo-poster.webp" aria-label="Snatcher acoustic direction-finding video demo">
+              <source src="assets/snatcher-level1-demo.mp4" type="video/mp4" />
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+          <p class="video-download"><a href="assets/snatcher-level1-demo.mp4" download>Download the 58-second English demo</a></p>
+        </div>
+      </section>
+
+      <section class="section" id="abstract">
+        <div class="container text-container">
+          <h2>Abstract</h2>
+          <p>
+            Apple’s Find My network connects nearly one billion devices to locate missing property via Bluetooth Low Energy (BLE). This paper reveals that insecure BLE advertisements and design tradeoffs allow unauthorized discovery and physical theft of lost Apple devices. We develop <em>Snatcher</em>, an attack and analysis framework implemented fully on Android smartphones without specialized hardware.
+          </p>
+          <p>
+            Snatcher identifies vulnerabilities in unencrypted BLE advertisements, unauthenticated acoustic triggers, and slow MAC address randomization. Through three levels—sound-based direction finding, RSSI–IMU sensor-fusion navigation, and spatial-temporal clustering—our Android-based platform physically tracks and locates lost Apple accessories and devices in real-world tests. Our results highlight a crucial conflict between privacy protection, anti-stalking design, and physical security, urging Apple to strengthen Find My defenses.
+          </p>
+        </div>
+      </section>
+
+      <section class="section figure-section">
+        <div class="container">
+          <h2>Overview</h2>
+          <figure class="paper-figure wide-figure">
+            <img src="assets/paper-overview.webp" alt="Overview of sound-play exploitation, RSSI-IMU navigation, and spatial-temporal clustering" loading="lazy" />
+            <figcaption>Snatcher’s progressive three-level attack model.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section designs-section">
+        <div class="container">
+          <h2>Three-Level Design</h2>
+
+          <article class="design-block">
+            <div class="design-copy">
+              <p class="design-index">Level 1</p>
+              <h3>Acoustic Direction Finding</h3>
+              <p>Snatcher triggers the non-owner sound on a separated AirTag or AirPods and uses smartphone microphone measurements together with human-body shadowing to infer the target direction.</p>
+            </div>
+            <figure class="paper-figure compact-figure">
+              <img src="assets/paper-level1.webp" alt="Human-body acoustic shadowing principle" loading="lazy" />
+            </figure>
+          </article>
+
+          <article class="design-block reverse">
+            <div class="design-copy">
+              <p class="design-index">Level 2</p>
+              <h3>RSSI–IMU Navigation</h3>
+              <p>For silent devices, Snatcher combines BLE signal trends with the phone’s motion trajectory to estimate whether the user should continue, turn around, or explore a new direction.</p>
+            </div>
+            <figure class="paper-figure">
+              <img src="assets/paper-level2.webp" alt="Architecture of the RSSI-IMU navigation system" loading="lazy" />
+            </figure>
+          </article>
+
+          <article class="design-block">
+            <div class="design-copy">
+              <p class="design-index">Level 3</p>
+              <h3>Spatial-Temporal Clustering</h3>
+              <p>Static profiling and dynamic stitching associate fragmented BLE observations across rotating MAC addresses, enabling persistent tracking of one physical device.</p>
+            </div>
+            <figure class="paper-figure">
+              <img src="assets/paper-level3.webp" alt="Two-phase spatial-temporal identity stitching algorithm" loading="lazy" />
+            </figure>
+          </article>
+        </div>
+      </section>
+
+      <section class="section figure-section">
+        <div class="container">
+          <h2>Experimental Examples</h2>
+          <figure class="paper-figure wide-figure">
+            <img src="assets/paper-navigation.webp" alt="Representative navigation trajectories for the three Snatcher levels" loading="lazy" />
+            <figcaption>Representative navigation trajectories reported in the paper.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section artifact-section">
+        <div class="container text-container">
+          <h2>Artifact</h2>
+          <p>
+            The AGPL-3.0 artifact includes SnatchAPP, two ESP32 evaluation targets, representative raw traces, and Python reproduction pipelines. The public release is deliberately scoped for responsible evaluation: live navigation and clustering assistance are withheld, while the corresponding algorithms are validated offline.
+          </p>
+          <div class="inline-links">
+            <a href="https://github.com/rzy0901/Snatcher">GitHub repository</a>
+            <a href="https://github.com/rzy0901/Snatcher/raw/main/SnatchAPP/SnatchAPP.apk">Android APK</a>
+            <a href="https://github.com/rzy0901/Snatcher/blob/main/doc/Snatcher_AE.pdf">Artifact appendix</a>
+            <a href="https://doi.org/10.5281/zenodo.20693210">Zenodo archive</a>
+          </div>
+          <p class="ethics-note">Evaluate Snatcher only against devices you own. Do not connect to, actuate, or track third-party devices.</p>
+        </div>
+      </section>
+
+      <section class="section citation-section">
+        <div class="container text-container">
+          <h2>BibTeX</h2>
+          <div class="citation-box">
+            <button class="copy-button" type="button" data-copy-target="citation-code">Copy</button>
+            <pre><code id="citation-code">@misc{ren2026snatcher,
+  title         = {Snatcher: Apple Find My Network Exposes Your Lost Devices To Strangers},
+  author        = {Zhenyu Ren and Yanbo Zhang and Boya Liu and Mo Li},
+  year          = {2026},
+  eprint        = {2606.21067},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CR},
+  doi           = {10.48550/arXiv.2606.21067},
+  url           = {https://arxiv.org/abs/2606.21067},
+  note          = {To appear in Proc. ACM CCS 2026}
+}</code></pre>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p><strong>Snatcher</strong> · ACM CCS 2026 · HKUST</p>
+        <p>Research and educational use only.</p>
+      </div>
+    </footer>
+  </body>
+</html>

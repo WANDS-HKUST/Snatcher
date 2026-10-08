@@ -7,7 +7,8 @@ triggers, and slow MAC-address randomization in Apple's Find My network expose
 lost devices to discovery, tracking, and physical theft.
 
 📄 Full appendix: [`doc/Snatcher_AE.pdf`](./doc/Snatcher_AE.pdf) &nbsp;·&nbsp;
-📦 Archive: [Zenodo (concept DOI — always the latest version)](https://doi.org/10.5281/zenodo.20693210)
+📦 Archive: [Zenodo (concept DOI — always the latest version)](https://doi.org/10.5281/zenodo.20693210) &nbsp;·&nbsp;
+🎬 Demo: [Level-1 acoustic attack (58 s, English)](./docs/assets/snatcher-level1-demo.mp4)
 
 ## 📰 News
 
