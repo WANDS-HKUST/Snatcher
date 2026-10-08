@@ -44,7 +44,6 @@ a { color: var(--blue-dark); }
 .section-intro { margin: -13px 0 28px; color: var(--muted); text-align: center; }
 .video-frame { overflow: hidden; border: 1px solid var(--line); border-radius: 9px; background: #000; box-shadow: var(--shadow); }
 .video-frame video { width: 100%; aspect-ratio: 16 / 9; }
-.video-download { margin: 12px 0 0; text-align: center; font-size: .83rem; }
 .text-container > p { color: #3d4349; font-family: Georgia, "Times New Roman", serif; font-size: 1.08rem; line-height: 1.78; }
 
 .paper-figure { margin: 0; text-align: center; }
